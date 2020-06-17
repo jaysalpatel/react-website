@@ -7,4 +7,8 @@ npm start
 run on localhost:3000
 
 
+##Errors
+removing a remote origin from git repo
+
+git remote rm origin
 
