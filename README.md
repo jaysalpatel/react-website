@@ -12,3 +12,10 @@ removing a remote origin from git repo
 
 git remote rm origin
 
+Build docker image
+
+docker build -t react2 . 
+
+Run docker image in container
+
+docker run -it -d -p 3000:3000 react2
