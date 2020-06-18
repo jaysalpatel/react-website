@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-deployment
+  labels:
+    app: react2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: react2
+  template:
+    metadata:
+      labels:
+        app: react2
+    spec:
+      containers:
+      - name: react2
+        image: docker.io/jaysalpatel/react2
+        ports:
+        - containerPort: 80
+        - port: 3000
