@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Persistent Volume
+metadata:
+  name: react-resume-kube
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 1G
+  hostPath:
+    path: /tmp/react-resume-kube

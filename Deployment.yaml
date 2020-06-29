@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react2-deployment
+  name: react-deployment
   labels:
     app: react
   spec:
@@ -15,8 +15,8 @@ metadata:
           app: react
       spec:
         containers:
-        - name: react2
-          image: docker.io/jaysalpatel/react2
+        - name: react
+          image: docker.io/jaysalpatel/react-resume-kube
           ports: 
           - containerPort: 80
           - port: 3000

@@ -22,3 +22,16 @@ Error:
 One of my pods has CrashLoopBackOff status
 
 The pod is crashing because it starts up then immediately exits, thus kubernetes restarts and the cycle continues
+
+
+Docker push error
+denied requested access to the resource is denied 
+
+include username/repo:image
+
+To delete everything form the current namespace
+
+kubectl delete all --all
+
+kubectl delete all --all -n {namespace}
+

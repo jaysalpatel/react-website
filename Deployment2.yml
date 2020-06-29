@@ -3,20 +3,19 @@ kind: Deployment
 metadata:
   name: react-deployment
   labels:
-    app: react2
+    app: react-resume
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: react2
+      app: react-resume
   template:
     metadata:
       labels:
-        app: react2
+        app: react-resume
     spec:
       containers:
-      - name: react2
-        image: docker.io/jaysalpatel/react2
+      - name: react-resume
+        image: docker.io/jaysalpatel/react-resume-kube
         ports:
         - containerPort: 80
-        - port: 3000

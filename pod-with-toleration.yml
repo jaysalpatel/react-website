@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: react
+  labels:
+    env: dev
+spec:
+  containers:
+  - name: react 
+    image: docker.io/jaysalpatel/react-resume-kube
+    imagePulllPolicy: IfNotPresent
+  tolerations:
+  - key: "home-page"
+    operator: "exists"
+    effect: "NoSchedule"
