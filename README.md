@@ -18,6 +18,10 @@ Run docker image in container
 
 docker run -it -d -p 3000:3000 react2
 
+To keep docker container running
+
+docker run --entrypoint "/bin/sh" -it jaysalpatel/react-resume-kube
+
 Error:
 One of my pods has CrashLoopBackOff status
 
@@ -34,4 +38,17 @@ To delete everything form the current namespace
 kubectl delete all --all
 
 kubectl delete all --all -n {namespace}
+
+
+Volumes
+aws ElasticBlockStore
+
+aws ec2 create-volume --availability-zone=us-east-1a --size=8 --volume-type=gp2
+
+vol-09023f829aafd71c7
+
+
+Stop all running containers
+
+docker stop $(docker ps -aq)
 

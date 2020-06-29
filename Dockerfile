@@ -8,5 +8,9 @@ RUN npm install
 
 COPY . .
 
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+
+#CMD ["sleep", "1d"]
+#or CMD ["sleep" "infinity"]
 CMD [" /bin/sh -c npm start"]
 CMD ["npm", "start"]
