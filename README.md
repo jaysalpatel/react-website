@@ -52,3 +52,22 @@ Stop all running containers
 
 docker stop $(docker ps -aq)
 
+
+
+Git error: 
+git config --global credential.UseHttpPath true
+
+
+Pushing this repo to codecommit
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 536510685689.dkr.ecr.us-east-1.amazonaws.com
+
+    docker build -t react-website . 
+
+    docker tag react-website:latest 536510685689.dkr.ecr.us-east-1.amazonaws.com/react-website:latest
+
+    docker push 536510685689.dkr.ecr.us-east-1.amazonaws.com/react-website:latest
+
+
+    docker tag react-website:timeout 536510685689.dkr.ecr.us-east-1.amazonaws.com/react-website:timeout
+
+    docker push 536510685689.dkr.ecr.us-east-1.amazonaws.com/react-website:latest

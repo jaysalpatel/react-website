@@ -1,5 +1,5 @@
 {
-  "name": "react2",
+  "name": "react-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,5 +30,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This app was bootstrapped with create-react-app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaysalpatel/react-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaysalpatel/react-website/issues"
+  },
+  "homepage": "https://github.com/jaysalpatel/react-website#readme"
 }
