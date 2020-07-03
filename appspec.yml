@@ -1,0 +1,31 @@
+version: 0.0
+0s: linux
+files:
+  - source: /src/index/html
+    destination: /var/www/html/
+hooks:
+  AfterInstall:
+    - location: /scripts/after_install.sh
+      timeout: 300
+      runas: root 
+  
+  InstallDependencies:
+    - location: /scripts/install_dependencies.sh
+      timeout: 300
+      runas: root 
+  
+  StartServer:
+    - location: /scripts/start_server.sh
+      timeout: 300
+      runas: root
+  
+  StopServer:
+    - location: /scripts/stop_server.sh
+      timeout: 300
+      runas: root 
+    
+  ValidateService:
+    - location: /scripts/validate_service.sh
+      timeout: 300
+      runas: root 
+      
