@@ -4,11 +4,11 @@ phases:
   pre_build:
     commands:
       - echo Logging into AWS ECR
-      - docker login 
+      - docker login
       - aws --version
       - $(aws ecr get-login-password --region us-east-1 no-include-email)
       - REPOSITORY_URL=536510685689.dkr.ecr.us-east-1.amazonaws.com/react-website:latest
-      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_VERISON | cut -c 1-7)
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:latest}
 
   build:
