@@ -1,17 +1,20 @@
-FROM node:13.10-alpine
+FROM nginx:alpine
 
-WORKDIR /usr/src
 
+
+COPY /src/index.html /usr/share/nginx/html
 COPY package.json .
 
-RUN npm install
+##WORKDIR /usr/src
+##UN npm install
 
 COPY . .
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+##ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 #CMD ["sleep", "1d"]
 #or CMD ["sleep" "infinity"]
-CMD [" /bin/sh -c npm start"]
-CMD ["npm", "start"]
-CMD ["sleep", "infinity"]
+
+#CMD [" /bin/sh -c npm start"]
+#CMD ["npm", "start"]
+#CMD ["sleep", "infinity"]
