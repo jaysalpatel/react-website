@@ -16,7 +16,7 @@ metadata:
       spec:
         containers:
         - name: react
-          image: docker.io/jaysalpatel/react-resume-kube
+          image: docker.io/jaysalpatel/react-website:latest
           ports: 
           - containerPort: 80
           - port: 3000

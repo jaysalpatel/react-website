@@ -1,24 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-const resumeelement = (
-  <u1>
-    <li>Jaysal Patel
-    </li>
-    <li> Work Experience</li>
-    <li>Skills</li>
-  </u1>
-)
-}
-ReactDOM.render(resumeelement, document.getElementById('root'));
-
-const certifications = (
-  <input type="text" />;
-)
-
-ReactDOM.render(certifications, document.getElementById('root'));
-
+import App from "App"
+ReactDOM.render(<App/>, document.getElementById("root"))
+//import App from "./App"
 //<u1>
 //<h1>Resume</h1>
   //<h2>Jaysal</h2>
@@ -40,4 +25,4 @@ ReactDOM.render(certifications, document.getElementById('root'));
     //<li>Terraform
   //</ul>
 //</u1>,
-//document.getElementById('root'))
+//document.getElementById('root'))2

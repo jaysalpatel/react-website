@@ -1,0 +1,14 @@
+import React from "react";
+import ReactDOM from "react-dom"
+
+ReactDOM.render(
+    <u1>
+        <li>
+        this is part of the list
+        </li>
+        <li>
+
+        </li>
+    </u1>,
+    document.getElemenById("root");
+)
