@@ -71,3 +71,20 @@ Pushing this repo to codecommit
     docker tag react-website:timeout 536510685689.dkr.ecr.us-east-1.amazonaws.com/react-website:timeout
 
     docker push 536510685689.dkr.ecr.us-east-1.amazonaws.com/react-website:latest
+
+
+
+Logs and monitoring
+    View log data for codedeploy ec2 deployments
+
+    less /var/log/aws/codedeploy-agent/codedeploy-agent.log
+    
+    Commands
+    go the start of the log file
+    g
+
+    go to tne end of log file
+    G
+
+    exit the log file
+    q

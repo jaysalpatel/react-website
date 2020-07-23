@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: ebs-volume
+spec:
+  containers:
+  - image: k8.gcr.io/test-webserver
+    name: react-container
+    volumeMounts:
+    - mountPath: /test-ebs
+      name: react-volume
+  volumes:
+  - name: react-volume
+    awsElasticBlockStore:
+        volumeID: vol-0c9262eca2449c465
+        fstype: ext4

@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Services
 metadata:
   name: react-service
@@ -6,6 +6,7 @@ spec:
   selector: react
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 9300
+    port: 8000
+    targetPort: 7000
+    nodePort: 30001
     

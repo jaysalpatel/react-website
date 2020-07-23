@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: react-website-sleep-300sec
+    name: react-website-sleep-300sec
 spec:
   containers:
-  - name: docker.io/jaysalpatel/react-website
-    image: react-website
-    ##just spin and wait forever
-    command: [ "/bin/bash", "-c". "--"]
-    args: [ "while true; do sleep 30; done;" ]
+    - name: docker.io/jaysalpatel/react-website
+      image: jaysalpatel/react-website
+      command: [ "/bin/bash", "-c". "--"]
+      args: [ "while true; do sleep 30; done;" ]

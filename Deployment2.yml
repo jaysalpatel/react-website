@@ -16,6 +16,19 @@ spec:
     spec:
       containers:
       - name: react-resume
-        image: docker.io/jaysalpatel/react-resume-kube
-        ports:
-        - containerPort: 80
+        image: docker.io/jaysalpatel/react-website:latest
+ 
+ apiVersion: v1
+ Kind: Service 
+ metadata: 
+    name: react-resume
+    namespace: kube-system
+spec:
+    type: NodePort
+    selector:
+      type: front-end
+    ports:
+    - port: 8000
+      targetPort: 7000
+      NodePort: 30001
+ 

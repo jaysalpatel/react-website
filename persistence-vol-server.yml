@@ -8,4 +8,4 @@ spec:
   capacity:
     storage: 1G
   hostPath:
-    path: /tmp/react-resume-kube
+    path: /tmp/react-resume
